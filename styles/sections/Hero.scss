@@ -31,7 +31,7 @@
         z-index: -1;
 
         @media (max-width: 900px) {
-            height: 100vh; // FIX: prevents long background scroll
+            height: 100vh; 
         }
     }
 
@@ -44,7 +44,7 @@
         @media (max-width: 900px) {
             flex-direction: column-reverse;
             position: relative;
-            height: auto; // FIX: remove forced height
+            height: auto; 
             padding: 20px;
             gap: 20px;
         }
@@ -52,14 +52,14 @@
         >img {
             top: 20vh;
             position: absolute;
-            width: clamp(250px, 40%, 550px); // RESPONSIVE FIX
+            width: clamp(250px, 40%, 550px); 
             height: auto;
             right: 10px;
 
             @media (max-width: 900px) {
                 width: 100%;
                 height: auto;
-                position: relative; // FIX overlap
+                position: relative; 
                 top: 0;
                 left: 0;
             }
@@ -76,7 +76,7 @@
             @media (max-width: 900px) {
                 margin: 0;
                 width: 100%;
-                margin-top: 10px; // FIX giant spacing
+                margin-top: 10px; 
                 gap: 15px;
             }
 
@@ -98,6 +98,10 @@
                 font-size: clamp(14px, 3.5vw, 16px);
                 line-height: 150%;
                 color: #F4F5F7;
+
+                @media (max-width: 900px) {
+                    font-weight: 500px;
+                }
             }
 
             >div:last-child {
@@ -119,24 +123,26 @@
                     color: #F4F5F7;
 
                     @media (max-width: 900px) {
-                        width: 100%; // RESPONSIVE FIX
+                        width: 100%; 
                     }
 
                     &:first-child {
                         background: #3AAFA9;
                         border: none;
-
-                        &:hover {
-                            background: transparent;
-                            border: 1px solid #3AAFA9;
-                        }
                     }
 
                     &:last-child {
                         background: transparent;
                         border: 1px solid #3AAFA9;
+                    }
 
-                        &:hover {
+                    &:hover {
+                        &:first-child {
+                            background: transparent;
+                            border: 1px solid #3AAFA9;
+                        }
+
+                        &:last-child {
                             background: #3AAFA9;
                             border: none;
                         }
