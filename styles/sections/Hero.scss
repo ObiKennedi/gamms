@@ -52,9 +52,9 @@
         >img {
             top: 20vh;
             position: absolute;
-            width: clamp(250px, 70%, 550px);
+            width: clamp(250px, 100%, 550px);
             height: auto;
-            right: 100px;
+            right: 50px;
 
             @media (max-width: 900px) {
                 width: 100%;
