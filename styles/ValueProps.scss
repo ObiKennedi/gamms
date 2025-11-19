@@ -1,0 +1,29 @@
+.value-props {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 10px auto;
+    height: 150px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 70px;
+    border: 1px solid #3AAFA936;
+    border-radius: 50px;
+
+    @media (max-width: 900px) {
+        height: fit-content;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    >div{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        >h2{
+            font-size: 35px;
+        }
+    }
+}

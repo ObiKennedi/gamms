@@ -38,8 +38,8 @@
     .hero-content {
         display: flex;
         height: 80%;
-        width: 100%;
-        padding: 20px 40px;
+        width: 90%;
+        margin: 20px auto;
 
         @media (max-width: 900px) {
             flex-direction: column-reverse;
@@ -67,7 +67,7 @@
 
         .write-ups {
             margin: 17% 10px;
-            width: 50%;
+            width: 55%;
             display: flex;
             flex-direction: column;
             gap: 20px;
