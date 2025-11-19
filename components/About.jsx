@@ -3,7 +3,7 @@ import "../styles/About.scss"
 
 export const About = () =>{
     return(
-        <div className="about">
+        <div className="about" data-aos="fade-up">
             <h2>One platform. Total control</h2>
             <div>
                 <p>From governance to chatrooms, education, and marketplaces, Gamms brings structure, engagement, and real-time collaboration under one secure system.</p> 
