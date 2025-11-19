@@ -31,7 +31,7 @@
         z-index: -1;
 
         @media (max-width: 900px) {
-            height: 100vh; 
+            height: 100vh;
         }
     }
 
@@ -44,7 +44,7 @@
         @media (max-width: 900px) {
             flex-direction: column-reverse;
             position: relative;
-            height: auto; 
+            height: auto;
             padding: 20px;
             gap: 20px;
         }
@@ -52,14 +52,14 @@
         >img {
             top: 20vh;
             position: absolute;
-            width: clamp(250px, 40%, 550px); 
+            width: clamp(250px, 70%, 550px);
             height: auto;
-            right: 10px;
+            right: 100px;
 
             @media (max-width: 900px) {
                 width: 100%;
                 height: auto;
-                position: relative; 
+                position: relative;
                 top: 0;
                 left: 0;
             }
@@ -76,7 +76,7 @@
             @media (max-width: 900px) {
                 margin: 0;
                 width: 100%;
-                margin-top: 10px; 
+                margin-top: 10px;
                 gap: 15px;
             }
 
@@ -106,7 +106,7 @@
 
             >div:last-child {
                 display: flex;
-                gap: 10px;
+                gap: 30px;
 
                 @media (max-width: 900px) {
                     flex-direction: column;
@@ -123,7 +123,7 @@
                     color: #F4F5F7;
 
                     @media (max-width: 900px) {
-                        width: 100%; 
+                        width: 100%;
                     }
 
                     &:first-child {
@@ -137,15 +137,8 @@
                     }
 
                     &:hover {
-                        &:first-child {
-                            background: transparent;
-                            border: 1px solid #3AAFA9;
-                        }
-
-                        &:last-child {
-                            background: #3AAFA9;
-                            border: none;
-                        }
+                        background: #3d7292b2, ;
+                        border: 1px solid #3AAFA9;
                     }
                 }
             }

@@ -6,7 +6,7 @@
     padding: 10px 20px;
 
     display: flex;
-    gap: clamp(20px, 10vw, 200px);
+    gap: clamp(20px, 15vw, 200px);
 
     backdrop-filter: blur(14px);
     border: 1px solid #3AAFA936;
@@ -36,7 +36,7 @@
     }
 
     >img.logo {
-        width: 130px;
+        width: 150px;
         padding-left: 20px;
 
         @media (max-width: 900px) {
@@ -160,7 +160,7 @@
 }
 
 .scrolled {
-    background: #1A2631;
+    display: none;
 }
 
 .unscrolled {

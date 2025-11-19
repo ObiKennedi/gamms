@@ -1,32 +1,32 @@
 .video-card {
     display: flex;
-    flex-direction: row;           
+    flex-direction: row;
     align-items: flex-start;
     justify-content: center;
     margin: 10px auto;
     height: fit-content;
-    padding: 30px;
-    width: 90%;
-    max-width: 1200px;              
+    padding: 30px 70px;
+    width: 100%;
+    max-width: 1200px;
     border-radius: 50px;
-    gap: 50px;
+    gap: 55px;
     box-sizing: border-box;
 
-    > div {
+    >div {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 20px;
-        flex: 1;                    
+        flex: 1;
 
-        > h2 {
+        >h2 {
             font-weight: 600;
             font-size: 35px;
             line-height: 100%;
             letter-spacing: 2%;
-            width: 90%;
         }
 
-        > p {
+        >p {
             font-weight: 400;
             font-size: 16px;
             line-height: 150%;
@@ -34,7 +34,7 @@
             width: 80%;
         }
 
-        > ul {
+        >ul {
             padding: 5px 0;
             list-style: none;
             margin: 0;
@@ -44,7 +44,7 @@
             letter-spacing: 0%;
             width: 80%;
 
-            > li {
+            >li {
                 position: relative;
                 padding-left: 28px;
 
@@ -63,9 +63,9 @@
             }
         }
 
-        > button {
+        >button {
             width: 300px;
-            max-width: 100%;        
+            max-width: 100%;
             height: 50px;
             padding: 10px;
             background: #3AAFA9;
@@ -77,17 +77,18 @@
             line-height: 100%;
 
             &:hover {
-                background: linear-gradient(113.35deg, #2c3e5000 -25.4%, #A7FFFB 91.66%);
-                color: #1A2631;
+                background: #3d7292b2, ;
+                border: 1px solid #3AAFA9;
             }
         }
     }
 
-    > video {
+    >video {
         border-radius: 50px;
         height: 400px;
         width: 100%;
-        max-width: 500px;            /* Limits video size on large screens */
+        max-width: 500px;
+        /* Limits video size on large screens */
         object-fit: cover;
         flex-shrink: 0;
     }
@@ -97,10 +98,10 @@
     flex-direction: row-reverse;
     background: #1A2631;
     color: #FFFCF1;
-    
+
     button {
         background: #3AAFA9;
-        
+
         &:hover {
             background: linear-gradient(113.35deg, #2c3e5000 -25.4%, #A7FFFB 91.66%);
             color: #1A2631;
@@ -108,7 +109,7 @@
     }
 }
 
-.light{
+.light {
     background: #FFFCF1;
     color: #1A2631;
 }
@@ -116,30 +117,31 @@
 /* RESPONSIVE: Switch to column on tablets and phones */
 @media (max-width: 992px) {
     .video-card {
-        flex-direction: column !important;    /* Force column, overrides .dark row-reverse */
+        flex-direction: column !important;
+        /* Force column, overrides .dark row-reverse */
         padding: 24px;
         gap: 32px;
     }
 
-    .video-card > video {
+    .video-card>video {
         height: 300px;
         max-width: 100%;
-        order: -1;                            
+        order: -1;
     }
 
-    .video-card > div {
+    .video-card>div {
         align-items: start;
         text-align: start;
     }
 
-    .video-card > div > h2,
-    .video-card > div > p,
-    .video-card > div > ul {
+    .video-card>div>h2,
+    .video-card>div>p,
+    .video-card>div>ul {
         width: 100%;
         max-width: 100%;
     }
 
-    .video-card > div > button {
+    .video-card>div>button {
         width: 100%;
         max-width: 320px;
     }
@@ -152,11 +154,11 @@
         border-radius: 30px;
     }
 
-    .video-card > video {
+    .video-card>video {
         height: 220px;
     }
 
-    .video-card > div > h2 {
+    .video-card>div>h2 {
         font-size: 28px;
     }
 }
