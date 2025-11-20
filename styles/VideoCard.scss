@@ -1,17 +1,17 @@
 .video-card {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
     margin: 10px auto;
-    height: fit-content;
-    padding: 30px 70px;
+    padding: 30px 40px;
     width: 100%;
     max-width: 1200px;
+    gap: 40px;
     border-radius: 50px;
-    gap: 55px;
     box-sizing: border-box;
 
+    /* CONTENT BLOCK */
     >div {
         display: flex;
         flex-direction: column;
@@ -19,32 +19,28 @@
         gap: 20px;
         flex: 1;
 
-        >h2 {
+        h2 {
             font-weight: 600;
             font-size: 35px;
             line-height: 100%;
-            letter-spacing: 2%;
+            letter-spacing: 2px;
         }
 
-        >p {
+        p,
+        ul {
             font-weight: 400;
             font-size: 16px;
             line-height: 150%;
-            letter-spacing: 0%;
-            width: 80%;
+            width: 100%;
+            max-width: 600px;
         }
 
-        >ul {
+        ul {
             padding: 5px 0;
             list-style: none;
             margin: 0;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 150%;
-            letter-spacing: 0%;
-            width: 80%;
 
-            >li {
+            li {
                 position: relative;
                 padding-left: 28px;
 
@@ -63,9 +59,9 @@
             }
         }
 
-        >button {
-            width: 300px;
-            max-width: 100%;
+        button {
+            width: 100%;
+            max-width: 320px;
             height: 50px;
             padding: 10px;
             background: #3AAFA9;
@@ -74,91 +70,92 @@
             color: #FFFFFF;
             font-weight: 700;
             font-size: 16px;
-            line-height: 100%;
+            cursor: pointer;
 
             &:hover {
-                background: #3d7292b2, ;
-                border: 1px solid #3AAFA9;
+                background: #3d7292;
             }
         }
     }
 
+    /* VIDEO */
     >video {
         border-radius: 50px;
         height: 400px;
         width: 100%;
         max-width: 500px;
-        /* Limits video size on large screens */
         object-fit: cover;
-        flex-shrink: 0;
+        flex-shrink: 1;
+    }
+
+    /* DARK MODE */
+    &.dark {
+        flex-direction: row-reverse;
+        background: #1A2631;
+        color: #FFFCF1;
+
+        button {
+            background: #3AAFA9;
+
+            &:hover {
+                background: linear-gradient(113.35deg,
+                        #2c3e5000 -25.4%,
+                        #A7FFFB 91.66%);
+                color: #1A2631;
+            }
+        }
+    }
+
+    /* LIGHT MODE */
+    &.light {
+        background: #F4F5F7;
+        color: #1A2631;
     }
 }
 
-.dark {
-    flex-direction: row-reverse;
-    background: #1A2631;
-    color: #FFFCF1;
+/* ─────────────────────────────
+   RESPONSIVENESS
+────────────────────────────── */
 
-    button {
-        background: #3AAFA9;
+/* Medium screens */
+@media (max-width: 1200px) {
+    .video-card {
+        gap: 30px;
+        padding: 24px;
+    }
+}
 
-        &:hover {
-            background: linear-gradient(113.35deg, #2c3e5000 -25.4%, #A7FFFB 91.66%);
-            color: #1A2631;
+/* Tablets + Phones */
+@media (max-width: 992px) {
+    .video-card {
+        flex-direction: column !important;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 32px;
+
+        >video {
+            height: 300px;
+            width: 100%;
+            max-width: 100%;
+            order: -1;
         }
     }
 }
 
-.light {
-    background: #F4F5F7;
-    color: #1A2631;
-}
-
-/* RESPONSIVE: Switch to column on tablets and phones */
-@media (max-width: 992px) {
-    .video-card {
-        flex-direction: column !important;
-        /* Force column, overrides .dark row-reverse */
-        padding: 24px;
-        gap: 32px;
-    }
-
-    .video-card>video {
-        height: 300px;
-        max-width: 100%;
-        order: -1;
-    }
-
-    .video-card>div {
-        align-items: start;
-        text-align: start;
-    }
-
-    .video-card>div>h2,
-    .video-card>div>p,
-    .video-card>div>ul {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .video-card>div>button {
-        width: 100%;
-        max-width: 320px;
-    }
-}
-
-/* Extra small phones */
+/* Small Phones */
 @media (max-width: 480px) {
     .video-card {
         padding: 20px;
         border-radius: 30px;
-    }
 
-    .video-card>video {
-        height: 220px;
-    }
+        >video {
+            height: 220px;
+        }
 
-    .video-card>div>h2 {
-        font-size: 28px;
+        >div {
+            h2 {
+                font-size: 28px;
+            }
+        }
     }
 }
