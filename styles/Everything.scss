@@ -6,17 +6,54 @@
     justify-content: center;
     align-items: center;
 
-    /* ...your existing styles... */
+    >h2 {
+        font-family: Open Sans;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 40px;
+        line-height: 50px;
+        letter-spacing: 2%;
+        text-align: center;
+        width: 60%;
+        color: #1A2631;
+
+        @media (max-width: 900px) {
+            width: 100%;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+
+    >p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #5B5B5B;
+        width: 50%;
+
+        @media (max-width: 900px) {
+            width: 100%;
+            font-size: 14px;
+        }
+    }
 
     >div {
         display: flex;
         width: 100%;
         max-width: 1200px;
         margin: 10px auto;
+        height: fit-content;
         gap: 30px;
         justify-content: space-between;
-        flex-wrap: wrap;
+        align-items: center;
         padding: 30px 70px;
+        flex-wrap: wrap;
+
+        @media (max-width: 900px) {
+            padding: 0;
+        }
 
         >div {
             display: flex;
@@ -28,22 +65,18 @@
             border-radius: 25px;
             background: #1A263103;
             gap: 20px;
-            transition:
-                transform 0.3s ease,
-                border-color 0.3s ease,
-                box-shadow 0.3s ease;
 
-            /* HOVER EFFECT */
+            @media (max-width: 900px) {
+                width: 100%;
+                height: 250px;
+            }
+
             &:hover {
                 transform: translateY(-8px); // lift up
                 border-color: #3AAFA9; // glow tint
                 box-shadow: 0 0 18px rgba(58, 175, 169, 0.45); // soft cyan glow
             }
 
-            /* mobile fix */
-            @media (max-width: 900px) {
-                width: 100%;
-            }
 
             >div {
                 width: 50px;
@@ -51,6 +84,26 @@
                 padding: 10px;
                 border: 1px solid #3AAFA929;
                 border-radius: 10px;
+
+                >img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            >h2 {
+                font-weight: 700;
+                font-style: Bold;
+                font-size: 18px;
+                line-height: 100%;
+                color: #1A2631;
+            }
+
+            >p {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 2%;
             }
         }
     }
