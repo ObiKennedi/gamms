@@ -1,4 +1,5 @@
 import { Everything } from "../Everything"
+import "../../styles/sections/Features.scss"
 
 export const Features = () =>{
     return(

@@ -13,6 +13,7 @@ function App() {
         <HeroSection/>
         <Products/>
         <Admin/>
+        <Features/>
       </main>
     </>
   )
