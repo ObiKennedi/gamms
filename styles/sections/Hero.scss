@@ -38,7 +38,7 @@
     .hero-content {
         display: flex;
         height: 80%;
-        width: 90%;
+        width: 95%;
         margin: 20px auto;
 
         @media (max-width: 900px) {
@@ -95,8 +95,9 @@
             >p {
                 font-weight: 500;
                 font-size: clamp(14px, 3.5vw, 16px);
-                line-height: 150%;
+                line-height: 25px;
                 color: #F4F5F7;
+                width: 70%;
 
                 @media (max-width: 900px) {
                     font-weight: 400px;
@@ -115,7 +116,7 @@
                 >button {
                     height: 50px;
                     padding: 0 30px;
-                    border-radius: 20px;
+                    border-radius: 50px;
                     font-weight: 700;
                     font-size: 16px;
                     line-height: 100%;
@@ -136,8 +137,8 @@
                     }
 
                     &:hover {
-                        background: #3d7292b2, ;
-                        border: 1px solid #3AAFA9;
+                        transform: translateY(-2px);
+                        background: #1A2631;
                     }
                 }
             }

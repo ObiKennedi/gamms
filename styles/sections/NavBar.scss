@@ -1,6 +1,6 @@
 .navbar {
-    width: 100%;
-    max-width: 1250px;
+    width: 95%;
+    //max-width: 1250px;
     height: 65px;
     margin: 20px auto;
     padding: 10px 20px;
@@ -130,12 +130,11 @@
                 font-size: 16px;
 
                 &:hover {
-                    background: linear-gradient(113.35deg, #2b3d4f00 -25.4%, #A7FFFB 91.66%);
-                    color: #2b3d4f;
+                    background: #2f8d88;
                 }
 
                 @media (max-width: 900px) {
-                    width: 100%; // FIX MOBILE OVERFLOW
+                    width: 100%; 
                 }
             }
 

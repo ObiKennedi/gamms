@@ -5,6 +5,8 @@
     padding: 20px;
     justify-content: center;
     align-items: center;
+    width: 95%;
+    margin: 0 auto;
 
     >h2 {
         font-family: Open Sans;
@@ -42,13 +44,12 @@
     >div {
         display: flex;
         width: 100%;
-        max-width: 1200px;
         margin: 10px auto;
         height: fit-content;
         gap: 30px;
         justify-content: space-between;
         align-items: center;
-        padding: 30px 70px;
+        padding: 30px 20px;
         flex-wrap: wrap;
 
         @media (max-width: 900px) {
@@ -58,7 +59,7 @@
         >div {
             display: flex;
             flex-direction: column;
-            width: 30%;
+            width: 350px;
             height: 250px;
             padding: 20px;
             border: 1px solid #3AAFA929;

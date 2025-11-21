@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 40px;
     width: 68%;
-    padding: 20px 5%;
+    padding: 0 2%;
 
     >h2 {
         font-weight: 700;
@@ -42,8 +42,7 @@
         letter-spacing: 0%;
 
         &:hover {
-            background: #3d7292b2, ;
-            border: 1px solid #3AAFA9;
+            background: #1A2631;
         }
     }
 }
